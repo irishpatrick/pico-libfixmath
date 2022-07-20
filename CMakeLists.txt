@@ -18,9 +18,5 @@ add_library(${PROJECT_NAME}
 
 target_include_directories(${PROJECT_NAME} PRIVATE include)
 
-# Pull in our pico_stdlib which pulls in commonly used features
-target_link_libraries(${PROJECT_NAME} pico_stdlib hardware_pwm)
+target_link_libraries(${PROJECT_NAME} pico_stdlib)
 
-if (${BUILD_EXAMPLES})
-        add_subdirectory(examples)
-endif()
